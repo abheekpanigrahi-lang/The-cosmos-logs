@@ -240,9 +240,10 @@ body, html {
     border: 1px solid rgba(255,255,255,0.1);
 }
 .postfont{
+  color: white;
   text-align: left;
   font-size: 20px;
-  width: 80%;
+  width: 50%;
   margin: 40px auto;   /* top/bottom spacing */
   padding: 40px;
   background: rgba(0, 0, 0, 0.6);
