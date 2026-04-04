@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body style = "overflow:hidden;">
+    
+    
+    <nav class="navbar">
+         <a href="#" class="logo"></a>
+         <div class="sidebar">
+            <ul>
+                <li onclick=hideSidebar()><a href="#"><img src = "close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"></a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="posts.html">Posts</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+         </div>
+         <div class="nav-links">
+            <ul>
+                <li class = "hideOnMobile"><a href="index.html">Home</a></li>
+                <li class = "hideOnMobile"><a href="posts.html">Posts</a></li>
+                <li class = "hideOnMobile"><a href="about.html">About</a></li>
+                <li class = "menu-button" onclick=showSidebar()><a href = "#"><img src = "menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"></a></li>
+            </ul>
+         </div>
+    </nav>
+    <div class="maincontainor"> 
+        <video autoplay muted loop playsinline id="bg-video">
+           <source src="space2.mp4" type="video/mp4">
+        </video>
+        
+        <header></header>
+        <div id="maintitle"><img id="LogoImage" src="cosmos logs 2.png"></div>
+        <div id="subtitle2" class = "hideOnMobile">“Somewhere, something incredible is waiting to be known.”</div>
+        <div id="subtitle2" class = "hideOnMobile">- Carl Sagan</div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitle2"></div>
+        <div id="subtitletext"><img id="subtitleimage" src="HMM-Photoroom.png"></div>
+        
+        
+    </div>
+    
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            subtitleimage.style.filter = 'blur(10px)';
+           
+
+        }
+    </script>
+    <script>
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            subtitleimage.style.filter = 'blur(0px)';
+            LogoImage.style.width = '500px';
+        }
+    </script>   
+    
+    
+</body>
+</html>

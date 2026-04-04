@@ -1,0 +1,320 @@
+body, html {
+  padding:0;
+  margin: 0;
+
+}
+
+.maincontainor{
+    height:100vh;
+    width:100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+    text-align: center;
+    letter-spacing: 4px;
+    text-shadow: 
+      0 0 10px rgba(255,255,255,0.6),
+      0 0 20px rgba(255,255,255,0.4);
+    
+    gap: 5px;
+}
+
+#maintitle{
+    opacity:1;
+    overflow: hidden;
+    animation: 2s fadeincustom ease-in-out, 5s hover infinite ease-in-out;
+    animation: cosmicPulse 3s ease-in-out infinite;
+}   /*This is the main title*/
+
+#LogoImage{
+    width:500px;
+}
+
+@keyframes fadeincustom{
+    0%{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    100%{
+        opacity: 1;
+        transform: scale(1.8);
+    }
+}
+
+@keyframes cosmicPulse {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+  }
+  50% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.8));
+  }
+}
+
+@keyframes hover{
+    0%{
+        transform: translateY(0px);
+        letter-spacing: 20px; 
+    }
+    50%{
+        transform: translateY(10px);
+        letter-spacing: 23px; 
+    }
+    100%{
+        transform: translateY(0px);
+        letter-spacing: 20px; 
+    }
+}
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+#subtitle{
+    font-weight: 200;
+    font-size: 2vw;
+    letter-spacing: 20px; 
+    animation: glowPulse 3s ease-in-out infinite;
+    color:white
+} /* this is the subtitle */
+#subtitle2{
+    font-weight: 200;
+    font-size: 1.2vw;
+    letter-spacing: 5px; 
+    position: relative;
+    top: -80px; /* move it UP */
+    color:white;
+    animation: glowPulse 3s ease-in-out infinite;
+
+} /* this is the subtitle2*/
+@keyframes glowPulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.9));
+  }
+}
+#subtitletext{
+    animation: cosmicPulse 3s ease-in-out infinite;
+}
+#subtitleimage{
+    width: 700px;
+    position:relative;
+    top: -90px;
+
+}
+/*display..flex*/
+.navbar{
+    position: sticky;   /* or fixed */
+    top: 0;
+    width: 95vw;
+    
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+}
+.navbar a{
+    height: 100%;
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    color:white;
+    text-decoration: none;
+    transition:transform 0.3s ease;
+}
+.navbar a:hover{
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    transform: scale(1.09);
+}
+.navbar .logo{
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: auto;
+}
+.navbar .nav-links ul{
+    width : 100%;
+    align-items: center;
+    list-style: none;
+    justify-content: flex-end;
+    display: flex;
+    gap: 20px;
+}
+.navbar .nav-links ul li{
+    height: 50px;
+    
+}
+.navbar .nav-links ul li :first-child{
+    margin-right: auto;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    display: none;
+    flex-direction: column;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    justify-content: flex-start;
+    z-index: 999;
+    animation: dropdown 3s ease-out forwards;
+    
+}
+.sidebar li{
+    width: 100%;
+    
+}
+.sidebar a{
+    width: 100%;
+    padding: 15px 20px;
+}
+.menu-button{
+    display: none;
+}
+@media(max-width: 700px) {
+    .hideOnMobile{
+        display: none;
+    }
+    .menu-button{
+        display: block;
+    }
+    
+}
+@media(max-width: 700px) {
+    .sidebar{
+        width: 100%;
+    }
+}
+@media(max-width: 700px) {
+    #subtitleimage{
+        width: 90%;
+        height : auto;
+        top: -150px;
+    }
+    
+}
+.postcard{
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.05); /* subtle glass effect */
+  backdrop-filter: blur(10px);           /* optional cool effect */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  transition:transform 0.3s ease;
+}
+.about{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    font-size: 25%;
+    margin-left: 20px;   
+    margin-right: 20px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(12px);
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+.postfont{
+  text-align: left;
+  font-size: 20px;
+  width: 80%;
+  margin: 40px auto;   /* top/bottom spacing */
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+h1 {
+  margin: 20px auto;   /* top/bottom spacing */
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.458);
+  backdrop-filter: blur(12px);    
+  font-size: 200%;
+  font-weight: 700;
+  margin-bottom: 5%;
+
+  text-shadow: 0 0 15px rgba(255,255,255,0.8);
+}
+h2 {
+
+  font-size: 150%;
+  font-weight: 600;
+  margin-top: 5%;
+  margin-bottom: 3.5%;
+
+  opacity: 0.9;
+}
+p {
+  font-size: 100%;
+  line-height: 1.7;
+  margin-bottom: 2%;
+  font-weight: 50;
+  opacity: 0.75;
+}
+@keyframes dropdown {
+    0% {
+        height : 0px;
+    }
+    100%{
+        height :100px;
+    }
+}
+#Abheek{
+    width: 200px;
+    border-radius: 50%;
+    margin-bottom: 20px; 
+}
+#Logo{
+  
+  width: 200px;
+  position: absolute;
+  top: -20px;    /* Adjust for desired padding from top */
+  left: 20px;   /* Adjust for desired padding from left */
+  z-index: 10;  /* Ensures it stays on top of the background */  
+  background: rgba(255, 255, 255, 0.2); /* Optional: adds a subtle background for better visibility */
+  backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+  border-radius: 10px; /* Optional: rounds the corners of the background */
+}
+#Logoabout{
+  
+  width: 200px;
+  position: absolute;
+  top: -20px;    /* Adjust for desired padding from top */
+  left: 20px;   /* Adjust for desired padding from left */
+  z-index: 10;  /* Ensures it stays on top of the background */  
+
+}
+.postcard:hover{
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 10px rgba(255,255,255,0.8);
+    transform: scale(1.05);
+    
+}

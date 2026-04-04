@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar">
+         <a href="#" class="logo"></a>
+         <div class="sidebar">
+            <ul>
+                <li onclick=hideSidebar()><a href="#"><img src = "../close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"></a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../posts.html">Posts</a></li>
+                <li><a href="../about.html">About</a></li>
+            </ul>
+         </div>
+         <div class="nav-links">
+            <ul>
+                <li class = "hideOnMobile"><a href="../index.html">Home</a></li>
+                <li class = "hideOnMobile"><a href="../posts.html">Posts</a></li>
+                <li class = "hideOnMobile"><a href="../about.html">About</a></li>
+                <li class = "menu-button" onclick=showSidebar()><a href = "#"><img src = "../menu_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"></a></li>
+            </ul>
+         </div>
+    </nav>
+    <img id="Logo" src="../cosmos logs 2.png">
+    <div class="maincontainor"> 
+        <video autoplay muted loop playsinline id="bg-video">
+           <source src="../space2.mp4" type="video/mp4">
+        </video>
+      
+      <div class = "postfont">  
+         <header></header>
+         <h1>Basics of Stars and the Earth</h1>
+         <h2>What do astronomers usually do?</h2>
+         <p></p>
+         <p></p>
+         <p>They Identify a problem/phenomena</p>
+         <p>Introduce a model/hypothesis and make predictions for further phenomena that would be seen is the model is correct.</p>
+         <p>Conduct experiments or observations to test the predictions.</p>
+         <p>Publish theories/papers so that they can be checked/criticized.This helps in providing info about when and where the model needs to be revised.</p>
+         <h2>Constellations</h2>
+         <p> Area on THE CELESTIAL SPHERE in which a group of a visible from a percieved pattern/outline, typically representing Inanimate object, Mythological Subject, Animal.</p>
+         <p>Acc. to modern star charts, there are 88 officially recognized constellations.</p>
+         <p>The CLOSENESS of the constellations are majorly because of the availability of them in the SAME DIRECTION as viewed from Earth</p>
+         <h2>Annual Motion</h2>
+         <p>The star appears to "slowly shift" throughout the year. This is due to the ELLIPTICAL ORBIT of the Earth around the Sun.</p>
+         <p> A particular star rises 4 mins earlier every night, 2 hours earlier every month.</p>
+         <h2>Mapping the sky</h2>
+         <p>Celestial Equator -> divides sky into northern hemisphere and southern hemisphere</p>
+         <p>Celestial Poles -> Points where the earth's axis of rotation would intersect the celestial sphere</p>
+         <p>Now, why is POLARIS called the POLE STAR/NORTH STAR?</p>
+         <p>Polaris is 1 degree away from north celestial pole, which is why it is called the NORTH STAR.</p>
+         <p>Points in the sky directly overhead an observer an observer anywhere on Earth is called the observer's ZENITH.</p>
+      </div>
+
+    </div>
+    
+    <script>
+        function showSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'flex';
+            subtitleimage.style.filter = 'blur(10px)';
+           
+
+        }
+    </script>
+    <script>
+        function hideSidebar(){
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.style.display = 'none';
+            subtitleimage.style.filter = 'blur(0px)';
+            LogoImage.style.width = '500px';
+        }
+    </script>   
+</body>
+</html>
