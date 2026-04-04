@@ -222,6 +222,7 @@ body, html {
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
   transition:transform 0.3s ease;
+  color: inherit;
 }
 .about{
     justify-content: space-between;
@@ -317,4 +318,7 @@ p {
     text-shadow: 0 0 10px rgba(255,255,255,0.8);
     transform: scale(1.05);
     
+}
+.postcard:visited {
+  color: inherit;
 }
