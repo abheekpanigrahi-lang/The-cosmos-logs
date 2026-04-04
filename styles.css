@@ -212,6 +212,7 @@ body, html {
     
 }
 .postcard{
+  color: white;
   text-decoration: none;
   display: block;
   font-size: 15px;
@@ -222,7 +223,7 @@ body, html {
   border-radius: 12px;
   border: 1px solid rgba(255,255,255,0.1);
   transition:transform 0.3s ease;
-  color: inherit;
+
 }
 .about{
     justify-content: space-between;
